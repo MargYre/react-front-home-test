@@ -71,3 +71,9 @@ export const cucumber: IngredientType = {
   type: "vegetables",
   unit: "unit",
 };
+
+export const cofee: IngredientType = {
+  name: "café",
+  type: "kg",
+  unit: "unit",
+};

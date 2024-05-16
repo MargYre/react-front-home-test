@@ -1,10 +1,14 @@
 import {
   butter,
   chocolate,
+  cofee,
   cream,
+  cucumber,
   egg,
+  feta,
   flour,
   redFruits,
+  salad,
   sugar,
 } from "../Ingredients/IngredientData";
 
@@ -86,7 +90,7 @@ export const stepsTarteAuxPoires: StepType[] = [
   {
     description:
       "Pour la garniture, travailler le beurre et le sucre au batteur électrique.",
-    order: 3,
+    order: 2,
     ingredients: [
       { ingredient: butter, quantity: 100, unit: "g" },
       { ingredient: sugar, quantity: 100, unit: "g" },
@@ -95,11 +99,59 @@ export const stepsTarteAuxPoires: StepType[] = [
   {
     description:
       "Incorporer les oeufs puis ajouter les amandes moulues et la farine",
-    order: 4,
+    order: 3,
   },
   {
     description:
       "Verser la préparation sur le fond de la pâte. Disposer les poires. Enfourner 50 mn à 180°",
-    order: 5,
+    order: 4,
+  },
+];
+
+export const stepsTiramisu: StepType[] = [
+  {
+    description: "Préparez le café fort et laissez-le refroidir",
+    order: 1,
+    ingredients: [
+      { ingredient: cofee, quantity: 200, unit: "g" },
+    ],
+  },
+  {
+    description:
+      "Mélange mascarpone :",
+    order: 2,
+    ingredients: [
+      { ingredient: cream, quantity: 100, unit: "g" },
+    ],
+  },
+  {
+    description:
+      "Battez les blancs d'œufs en neige ferme",
+    order: 3,
+    ingredients: [
+      { ingredient: egg, quantity: 3},
+    ],
+  },
+  {
+    description:
+      "Incorporez délicatement les blancs en neige au mélange de mascarpone.",
+    order: 4,
+  },
+];
+
+export const stepsWaldorfSalad: StepType[] = [
+  {
+    description: "Faire la salad",
+    order: 1,
+    ingredients: [
+      { ingredient: salad, quantity: 200, unit: "g" },
+      { ingredient: feta, quantity: 100, unit: "g" },
+      { ingredient: cucumber, quantity: 1 },
+    ],
+  },
+  {
+    description:
+      "Manger la salade",
+    order: 2,
   },
 ];

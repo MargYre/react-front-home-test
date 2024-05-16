@@ -14,12 +14,15 @@ import {
   salad,
   cucumber,
   feta,
+  cofee,
 } from "../Ingredients/IngredientData";
 
 import {
   stepsFondantChocolat,
   stepsPavlova,
   stepsTarteAuxPoires,
+  stepsTiramisu,
+  stepsWaldorfSalad,
 } from "../Steps/StepData";
 
 import {
@@ -52,7 +55,7 @@ const fondantChocolat: RecipeType = {
   description:
     "Le fondant au chocolat est un gâteau au chocolat qui fond en bouche",
   imageURL:
-    "https://www.guydemarle.com/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc0ZvIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--333bff76e254e1934153f809f2d9cc2b5967da52/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpvR1JWUTZER2R5WVhacGRIbEpJZ3REWlc1MFpYSUdPd2RVT2dsamNtOXdTU0lRTmpBd2VEWXdNQ3N3S3pBR093ZFUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--929a1958a8630156464b089800ca739f1b4570de/fondant-au-chocolat.jpg",
+    "https://empreintesucree.fr/wp-content/uploads/2018/02/1-fondant-chocolat-recette-patisserie-empreinte-sucree-1.jpg",
   ingredients: [chocolate, egg, flour, butter, sugar],
   etapes: stepsFondantChocolat,
   ingredientsWithQuantity: [
@@ -80,12 +83,28 @@ const pearPie: RecipeType = {
   ],
   tags: [dessert, autumn],
 };
+const tiramisu: RecipeType = {
+  nom: "Tiramisu",
+  description:
+    "Le tiramisu est un dessert traditionnel de la cuisine italienne",
+  imageURL:
+    "https://cdn.viously.com/video/lNdTnucho03/1-w960.webp",
+  ingredients: [sugar, cream, cofee],
+  etapes: stepsTiramisu,
+  ingredientsWithQuantity: [
+    { ingredient: cofee, quantity: 200, unit: "g" },
+    { ingredient: cream, quantity: 100, unit: "g"  },
+    { ingredient: egg, quantity: 3 },
+  ],
+  tags: [dessert, autumn],
+};
 
 const waldorfSalad: RecipeType = {
   nom: "Salade Waldorf",
   description: "La salade greque est parfaite pour l'été",
   imageURL:
     "https://assets.afcdn.com/recipe/20190704/94666_w420h420c1cx2689cy1920cxb5378cyb3840.webp",
+  etapes: stepsWaldorfSalad,
   ingredients: [salad, cucumber, feta],
   ingredientsWithQuantity: [
     { ingredient: salad, quantity: 1 },
@@ -103,6 +122,7 @@ export const allRecipes: ListOfRecipes = [
   fondantChocolat,
   pearPie,
   waldorfSalad,
+  tiramisu
 ];
 
 export const summerRecipes = allRecipes.filter((recipe) => {
